@@ -170,7 +170,6 @@ section {
 .section__pic-container img {
   max-width: 100%;
   height: auto;
-  margin-left: 200px;
   border-radius: 2rem;
 }
 
@@ -319,28 +318,6 @@ section {
   text-align: center;
 }
 
-.about-pic {
-  border-radius: 2rem;
-  width: 100%;
-  max-width: 400px; /* Ensure image doesn't grow too large */
-}
-
-.arrow {
-  position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
-}
-
-.details-container {
-  padding: 1.5rem;
-  flex: 1;
-  background: white;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  text-align: center;
-}
-
 .section-container {
   gap: 4rem;
   min-height: 80%;
@@ -383,13 +360,19 @@ section {
 
 article {
   display: flex;
+  align-items: center; /* Align items vertically */
   width: 10rem;
-  justify-content: space-around;
   gap: 0.5rem;
 }
 
 article .icon {
   cursor: default;
+  vertical-align: middle; /* Ensure icon aligns with the middle of the text */
+}
+
+article h3 {
+  line-height: 1.5rem; /* Adjust line-height to match the icon's height */
+  padding-bottom:  0px;
 }
 
 /* PROJECTS SECTION */
@@ -407,13 +390,17 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 80%; /* Set a specific width */
+  height: 100px; /* Set a specific height */
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+  display: block; /* Ensure the image is treated as a block element */
+  margin: 0 auto; /* Center the image horizontally */
 }
 
 .project-title {
   margin: 1rem;
   color: black;
+  font-size: 1.55rem;
 }
 
 .project-btn {

@@ -9,11 +9,7 @@
   #contact,
   #projects {
     height: fit-content;
-  }
-  .section__pic-container img {
-    margin-left: 0;
-  }
-  
+  }  
 }
 
 @media screen and (max-width: 1200px) {
