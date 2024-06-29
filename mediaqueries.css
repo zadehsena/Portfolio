@@ -52,9 +52,12 @@
   footer {
     height: 40vh;
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
+  #profile,
+  #about,
+  #experience,
+  #projects,
+  #contact {
+    padding: 10%;
   }
   article {
     font-size: 1rem;
@@ -87,8 +90,9 @@
     text-align: center;
   }
   .section__pic-container {
-    width: auto;
+    width: 80%;
     height: 46vw;
+    padding-bottom: 50px;
     justify-content: center;
   }
   .section__text__p2 {
@@ -98,6 +102,7 @@
     font-size: 2rem;
   }
   .text-container {
-    text-align: justify;
+    text-align: center;
+    margin: 0;
   }
 }

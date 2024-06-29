@@ -31,6 +31,19 @@ a,
   transition: all 300ms ease;
 }
 
+/* Initial hidden state */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+/* Class to apply when element is in view */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* DESKTOP NAV */
 
 nav,
@@ -421,11 +434,11 @@ article h3 {
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;  /* Ensure items wrap within the container */
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
-  margin: 2rem auto;
+  background: rgb(250, 250, 250);  /* Corrected the background color value */
   padding: 0.5rem;
 }
 
@@ -438,7 +451,7 @@ article h3 {
 }
 
 .contact-info-container p {
-  font-size: larger;
+  font-size: clamp(0.75rem, 2vw, 1.5rem); /* min size, preferred size, max size */
 }
 
 .contact-icon {
